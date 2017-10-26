@@ -1,5 +1,3 @@
-[TOC]
-
 # String
 
 ## 657. Judge Route Circle
