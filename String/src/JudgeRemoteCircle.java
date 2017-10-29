@@ -1,4 +1,3 @@
-import java.util.Iterator;
 
 public class JudgeRemoteCircle {
 	   public boolean judgeCircle(String moves) {
@@ -19,18 +18,7 @@ public class JudgeRemoteCircle {
 	                System.out.println("wrong input!");
 	            }
 	        }
-	        if(zong==0&&heng==0){
-	        	return true;
-	        }else{
-	        	return false;
-	        }
+	       return heng==0&&zong==0;
 	    }
-	   public static void main(String[] args){
-		   Test t=new Test();
-		   if(t.judgeCircle("UUDRD")){
-			   System.out.println("YES");
-		   }else{
-			   System.out.println("NO");
-		   }
-	   }
+	  
 }

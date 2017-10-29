@@ -55,3 +55,36 @@ class Solution {
 ```
 
 - 将string转为char数组，之后使用char数组进行判断
+
+# 344. Reverse String
+
+- Description
+
+Write a function that takes a string as input and returns the string reversed.
+
+**Example:**
+Given s = "hello", return "olleh".
+
+- Solution
+
+```java
+class Solution {
+    public String reverseString(String s) {
+        		char[] chars=s.toCharArray();
+		int i=0;
+		int l=s.length()-1;
+		//定义临时变量
+		char temp;
+		while(i<l){//思考是否需要等于：加不加都一样结果
+			temp=chars[i];
+			chars[i]=chars[l];
+			chars[l]=temp;
+            ++i;
+            --l;
+		}
+			
+		return new String(chars);
+    }
+}
+```
+
