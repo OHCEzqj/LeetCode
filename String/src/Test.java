@@ -11,8 +11,11 @@ public class Test {
 //		   ReverseString t=new ReverseString();
 //		   System.out.print(t.reverseString("hello world!"));
 		   
-		   ReverseStringII t=new ReverseStringII();
-		   System.out.print(t.reverseStr("abcdefg",3));
+//		   ReverseStringII t=new ReverseStringII();
+//		   System.out.print(t.reverseStr("abcdefg",3));
+		   
+		   ReverseVowelsofaString t=new ReverseVowelsofaString();
+		   System.out.print(t.reverseVowels("leetcode"));
 	   }
 	   
 }
