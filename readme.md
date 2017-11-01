@@ -1,8 +1,10 @@
 # String
 
-[657. Judge Route Circle](#657-Judge-Route-Circle)
+[657. Judge Route Circle](#657-judge-route-circle)
 
-[344. Reverse String](#344-Reverse-String)
+[344. Reverse String](#344-reverse-string)
+
+[541. Reverse String II](541-reverse-string-iI)
 
 ## 657. Judge Route Circle
 
@@ -88,6 +90,63 @@ class Solution {
 		}
 			
 		return new String(chars);
+    }
+}
+```
+
+##  541. Reverse String II
+
+- Description
+
+Given a string and an integer k, you need to reverse the first k characters for every 2k characters counting from the start of the string. If there are less than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and left the other as original.
+
+**Example:**
+
+```
+Input: s = "abcdefg", k = 2
+Output: "bacdfeg"
+
+```
+
+Restrictions:
+
+1. The string consists of lower English letters only.
+2. Length of the given string and k will in the range [1, 10000]
+
+```java
+class Solution {
+    public String reverseStr(String s, int k) {
+             char[] chars=s.toCharArray();
+	        int time=s.length()/(2*k);
+	        System.out.println(time);
+	        char temp;
+	        if(time>0){
+	        	for(int i=0;i<time;i++){//change ki ki+1 ki+2....ki+k-1
+		        	for(int x=0;x<(k/2);x++)
+		        	{
+		        		temp=chars[2*k*i+x];
+		        		chars[2*k*i+x]=chars[2*k*i+k-1-x];
+		        		chars[2*k*i+k-1-x]=temp;
+		        	}
+		        }
+	        }
+	        //change 2k*time-1 2k*time...
+	        int left=s.length()-2*k*time;//剩下的数组个数
+	        //2k*time-1 2k*time .....2k*time+left-1
+	        if(left<k){
+	        	for(int x=0;x<(left/2);x++){
+	        		temp=chars[2*k*time+x];
+	        		chars[2*k*time+x]=chars[2*k*time-1+left-x];
+	        		chars[2*k*time-1+left-x]=temp;
+	        	}
+	        }else{//left>k
+	        	for(int x=0;x<(k/2);x++){
+	        		temp=chars[2*k*time+x];
+	        		chars[2*k*time+x]=chars[2*k*time-1+k-x];
+	        		chars[2*k*time-1+k-x]=temp;
+	        	}
+	        }
+	       return new String(chars);
     }
 }
 ```
