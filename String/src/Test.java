@@ -12,7 +12,7 @@ public class Test {
 //		   System.out.print(t.reverseString("hello world!"));
 		   
 		   ReverseStringII t=new ReverseStringII();
-		   System.out.print(t.reverseStr("abcdefg",8));
+		   System.out.print(t.reverseStr("abcdefg",3));
 	   }
 	   
 }
