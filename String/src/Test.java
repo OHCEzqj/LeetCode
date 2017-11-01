@@ -8,7 +8,11 @@ public class Test {
 //			   System.out.println("NO");
 //		   }
 		   
-		   ReverseString t=new ReverseString();
-		   System.out.print(t.reverseString("hello world!"));
+//		   ReverseString t=new ReverseString();
+//		   System.out.print(t.reverseString("hello world!"));
+		   
+		   ReverseStringII t=new ReverseStringII();
+		   System.out.print(t.reverseStr("abcdefg",8));
 	   }
+	   
 }
