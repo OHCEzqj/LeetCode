@@ -1,8 +1,8 @@
 # String
 
-[657. Judge Route Circle](#657. Judge Route Circle)
+[657. Judge Route Circle](#657-Judge-Route-Circle)
 
-[344. Reverse String](344. Reverse String)
+[344. Reverse String](#344-Reverse-String)
 
 ## 657. Judge Route Circle
 
