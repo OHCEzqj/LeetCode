@@ -6,6 +6,10 @@
 
 [541. Reverse String II](#541-reverse-string-ii)
 
+[345. Reverse Vowels of a String](345-reverse-vowels-of-a-string)
+
+[67. Add binary](#67-add-binary)
+
 
 
 ## 657. Judge Route Circle
@@ -188,4 +192,134 @@ class Solution {
 	 }
 }
 ```
+
+##  345. Reverse Vowels of a String
+
+Write a function that takes a string as input and reverse only the vowels of a string.
+
+**Example 1:**
+Given s = "hello", return "holle".
+
+**Example 2:**
+Given s = "leetcode", return "leotcede".
+
+**Note:**
+The vowels does not include the letter "y".
+
+```java
+class Solution {
+    public String reverseVowels(String s) {
+       char[] chars=s.toCharArray();
+        String point="aeiouAEIOU";
+        int l=s.length()-1;
+        int i=0;
+        char temp;
+        
+        for(;i<l;i++){
+        	if(point.contains(chars[i]+"")){//扫描到前面的元音字母
+        		System.out.println(chars[i]);
+        		for(;l>i;l--){
+        			if(point.contains(chars[l]+"")){//扫描到后面的，交换
+        				System.out.println(chars[l]);
+        				temp=chars[i];
+        				chars[i]=chars[l];
+        				chars[l]=temp;	
+        				l--;
+        				break;//交换结束，退出l遍历循环
+        			}
+        		}
+        	}
+        }
+        
+		return new String(chars);
+    }
+}
+```
+
+improve
+
+```java
+	public String reverseVowels(String s) {
+        char[] chars=s.toCharArray();
+        String point="aeiouAEIOU";
+        int l=s.length()-1;
+        int i=0;
+        char temp;
+        
+        while(i<l){
+        	while(i<l&&!point.contains(chars[i]+"")){
+        		i++;
+        	}
+        	while(l>i&&!point.contains(chars[l]+"")){
+        		l--;
+        	}
+        	temp=chars[i];
+        	chars[i]=chars[l];
+        	chars[l]=temp;
+        	i++;
+        	l--;
+        }
+        
+		return new String(chars);
+    	}
+```
+
+## 67. Add Binary
+
+Given two binary strings, return their sum (also a binary string).
+
+For example,
+a = `"11"`
+b = `"1"`
+Return `"100"`.
+
+```java
+class Solution {
+    public String addBinary(String a, String b) {
+		int x=BinaryToDecimal(a);
+		int y=BinaryToDecimal(b);
+		return Integer.toBinaryString(x+y);
+        
+		}
+	public int BinaryToDecimal(String s){
+		char[] chars=s.toCharArray();
+		int length=s.length();
+		int result = 0;
+		for(int i=0;i<length;i++){
+			result+=(chars[i]-48)*Math.pow(2, length-i-1);
+		}
+		return result;
+	}
+}
+```
+
+二进制过长，如111111111111000001101010，则超过运算限制。
+
+improve:
+
+```java
+
+public class AddBinary {
+	public String addBinary(String a, String b) {		
+		
+		char[] ca=a.toCharArray();
+		char[] cb=b.toCharArray();
+		int la=a.length()-1;
+		int lb=b.length()-1;
+		int add=0;
+		StringBuilder sb=new StringBuilder();
+		while(la>=0||lb>=0||add==1){
+			//从最小为开始，进行每次运算
+			int ta= (la)<0? 0:ca[la--] -'0';
+			int tb= (lb)<0? 0:cb[lb--] -'0';
+			//取余为新位
+			sb.insert(0, (ta+tb+add)%2);
+			add=(ta+tb+add)/2;
+		}
+		return sb.toString();
+		}
+}
+```
+
+
 

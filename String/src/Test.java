@@ -14,8 +14,12 @@ public class Test {
 //		   ReverseStringII t=new ReverseStringII();
 //		   System.out.print(t.reverseStr("abcdefg",3));
 		   
-		   ReverseVowelsofaString t=new ReverseVowelsofaString();
-		   System.out.print(t.reverseVowels("leetcode"));
+//		   ReverseVowelsofaString t=new ReverseVowelsofaString();
+//		   System.out.print(t.reverseVowels("leetcode"));
+		   
+		   AddBinary t=new AddBinary();
+		   System.out.print(t.addBinary("101000001001001101100100",
+				   "11010100101110111000111110011"));
 	   }
 	   
 }

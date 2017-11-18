@@ -1,4 +1,5 @@
 
+
 public class JudgeRemoteCircle {
 	   public boolean judgeCircle(String moves) {
 	        int heng=0;
