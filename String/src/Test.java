@@ -17,9 +17,13 @@ public class Test {
 //		   ReverseVowelsofaString t=new ReverseVowelsofaString();
 //		   System.out.print(t.reverseVowels("leetcode"));
 		   
-		   AddBinary t=new AddBinary();
-		   System.out.print(t.addBinary("101000001001001101100100",
-				   "11010100101110111000111110011"));
+//		   AddBinary t=new AddBinary();
+//		   System.out.print(t.addBinary("101000001001001101100100",
+//				   "11010100101110111000111110011"));
+		   
+		   RomantoInteger r=new RomantoInteger();
+		   System.out.print(r.romanToInt("DCXXI"));
+		   		   	   
 	   }
 	   
 }
