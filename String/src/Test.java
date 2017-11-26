@@ -21,8 +21,13 @@ public class Test {
 //		   System.out.print(t.addBinary("101000001001001101100100",
 //				   "11010100101110111000111110011"));
 		   
-		   RomantoInteger r=new RomantoInteger();
-		   System.out.print(r.romanToInt("DCXXI"));
+//		   RomantoInteger r=new RomantoInteger();
+//		   System.out.print(r.romanToInt("DCXXI"));
+		   
+		   LengthofLasWord r=new LengthofLasWord();
+		   System.out.println("hello world".length());
+		   System.out.println("hello".lastIndexOf(" "));
+		   System.out.println(r.lengthOfLastWord("hello"));
 		   		   	   
 	   }
 	   
