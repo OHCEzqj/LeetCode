@@ -24,11 +24,13 @@ public class Test {
 //		   RomantoInteger r=new RomantoInteger();
 //		   System.out.print(r.romanToInt("DCXXI"));
 		   
-		   LengthofLasWord r=new LengthofLasWord();
-		   System.out.println("hello world".length());
-		   System.out.println("hello".lastIndexOf(" "));
-		   System.out.println(r.lengthOfLastWord("hello"));
+//		   LengthofLasWord r=new LengthofLasWord();
+//		   System.out.println("hello world".length());
+//		   System.out.println("hello".lastIndexOf(" "));
+//		   System.out.println(r.lengthOfLastWord("hello"));
 		   		   	   
+		   ReverseWordsInAStringIII s=new ReverseWordsInAStringIII();
+		   System.out.println(s.reverseWords("Let's take LeetCode contest"));
 	   }
 	   
 }

@@ -1,7 +1,7 @@
 
 public class LengthofLasWord {
 	public int lengthOfLastWord(String s) {
-        return s.lastIndexOf(" ")>0? s.length()-s.lastIndexOf(" ")-1: s.length();
+        return s.trim().lastIndexOf(" ")>0? s.trim().length()-s.trim().lastIndexOf(" ")-1: s.length();
     }
 
 }
