@@ -29,8 +29,12 @@ public class Test {
 //		   System.out.println("hello".lastIndexOf(" "));
 //		   System.out.println(r.lengthOfLastWord("hello"));
 		   		   	   
-		   ReverseWordsInAStringIII s=new ReverseWordsInAStringIII();
-		   System.out.println(s.reverseWords("Let's take LeetCode contest"));
+//		   ReverseWordsInAStringIII s=new ReverseWordsInAStringIII();
+//		   System.out.println(s.reverseWords("Let's take LeetCode contest"));
+
+           //System.out.println( "11"+" ".trim().split( " " )[0]+"22");
+		   NumberofSegmentsinaString s=new NumberofSegmentsinaString();
+		   System.out.println(s.countSegments(", , , ,        a, eaefa"));
 	   }
 	   
 }

@@ -16,6 +16,8 @@
 
 [557. Reverse Words in a String III](#557-reverse-words-in-a-string-iii)
 
+[434. Number of Segments in a String](#434-number-of-segment-in-a-string)
+
 
 ## 657. Judge Route Circle
 
@@ -445,6 +447,57 @@ class Solution {
 		}
 		return c;
 	}
+}
+```
+
+## 434. Number of Segments in a String
+
+Count the number of segments in a string, where a segment is defined to be a contiguous sequence of non-space characters.
+
+Please note that the string does not contain any **non-printable** characters.
+
+**Example:**
+
+```
+Input: "Hello, my name is John"
+Output: 5 
+```
+
+**Solution；**
+
+```java
+class Solution {
+    public int countSegments(String s) {
+          String ss=s.trim();
+        //将原始的String去除开始与结束空格
+        char[] chars=ss.toCharArray();
+        int num=1;
+        //该String都是空格
+        if (chars.length==0)
+            return 0;
+        int st=0;
+        int end;
+        for(int i=0;i<chars.length;i++){
+            if(chars[i]==' ') {
+                end=i;
+                String substring=ss.substring( st,end ).trim();
+                if(substring.length()>0)
+                    num++;
+                st=i+1;
+            }
+        }
+     return  num;
+    }
+}
+```
+
+**Improved version:**
+
+```java
+public class NumberofSegmentsinaString {
+    public int countSegments(String s) {
+        return  s.trim().length()==0? 0:s.trim().split( "\\s+"  ).length;
+    }
 }
 ```
 
